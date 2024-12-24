@@ -1,33 +1,120 @@
-body {
-    font-family: Arial, sans-serif;
+/* إعادة تعيين القيم الافتراضية */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* إعدادات الخلفية */
+body {
+    background-image: url("https://i.ibb.co/6JzcJj2/background.jpg"); /* رابط الخلفية الجديدة */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    margin: 0;
 }
 
+/* الحاوية العامة */
 .container {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
 }
 
-h1 {
-    color: #333;
-}
-
-button {
+/* عداد النقاط */
+.points-counter {
+    position: absolute;
+    bottom: 200px; /* ضبط المسافة ليكون فوق الصورة مباشرة */
+    background: rgba(0, 0, 0, 0.7); /* خلفية شفافة */
     padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #0078d4;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 24px; /* حجم الخط أكبر */
+    font-weight: bold; /* خط غامق */
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+}
+
+/* حاوية الصورة */
+.image-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.image-container img {
+    width: 150px;
+    height: auto;
     cursor: pointer;
-    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.image-container img:active {
+    transform: scale(0.95);
+}
+
+/* القلوب */
+#hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* الأزرار أسفل الشاشة */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #121212;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #333;
+}
+
+.nav-btn i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.nav-btn span {
+    font-size: 14px;
 }
