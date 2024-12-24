@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Web App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Interactive Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Telegram Web App</h1>
-        <button id="sendMessage">Send Message to Bot</button>
+        <!-- عداد النقاط -->
+        <div class="points-counter">Points: <span id="points">0.0</span></div>
+
+        <!-- الصورة -->
+        <div class="image-container">
+            <img id="clickable-image" src="https://i.ibb.co/L0SH7Xb/image.png" alt="Interactive Image">
+        </div>
+
+        <!-- القلوب (تأثير النقر) -->
+        <div id="hearts-container"></div>
+
+        <!-- الأزرار أسفل الشاشة -->
+        <footer class="footer">
+            <button class="nav-btn">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Exchange</span>
+            </button>
+            <button class="nav-btn">
+                <i class="fas fa-coins"></i>
+                <span>Earn</span>
+            </button>
+            <button class="nav-btn">
+                <i class="fas fa-user-friends"></i>
+                <span>Friends</span>
+            </button>
+            <button class="nav-btn">
+                <i class="fas fa-sync-alt"></i>
+                <span>Swap</span>
+            </button>
+        </footer>
     </div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
